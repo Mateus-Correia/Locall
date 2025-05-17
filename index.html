@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Map Coupon System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Locall Logo" class="logo-image">
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-login">Login</button>
+            <button class="btn-register">Cadastrar</button>
+        </div>
+    </header>
+    
+    <div class="sidebar">
+        <h2>Locais com Cupons</h2>
+        <div class="locations-list">
+            <div class="location-item">
+                <h3>Tanque</h3>
+                <p>Cupom de 20% de desconto</p>
+            </div>
+            <div class="location-item">
+                <h3>Catedral</h3>
+                <p>Cupom de 15% de desconto</p>
+            </div>
+            <!-- Mais locais podem ser adicionados aqui -->
+        </div>
+    </div>
+
+    <div id="map"></div>
+    <div id="coupon-popup" class="hidden">
+        <div class="popup-content">
+            <h3>🎁 Coupon Unlocked!</h3>
+            <p id="coupon-message"></p>
+            <button onclick="dismissCoupon()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Load Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Load GLTFLoader for 3D models -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+            
+    <!-- Load our main script -->
+    <script src="script.js"></script>
+</body>
+</html>

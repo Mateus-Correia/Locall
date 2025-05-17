@@ -1,0 +1,6 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Texto 'Locall' -->
+  <text x="5" y="30" font-family="Arial" font-size="32" font-weight="bold" fill="#3498db">Locall</text>
+  <!-- Ícone de localização -->
+  <path d="M110 15 C110 9 105 4 99 4 C93 4 88 9 88 15 C88 23 99 34 99 34 C99 34 110 23 110 15 Z M99 19 C96 19 94 17 94 14 C94 11 96 9 99 9 C102 9 104 11 104 14 C104 17 102 19 99 19 Z" fill="#3498db"/>
+</svg>
