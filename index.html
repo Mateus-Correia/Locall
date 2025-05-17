@@ -11,6 +11,10 @@
         <div class="logo">
             <img src="assets/logo.svg" alt="Locall Logo" class="logo-image">
         </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Mapa</a>
+            <a href="cadastro.html" class="nav-link">Cadastrar Estabelecimento</a>
+        </nav>
         <div class="auth-buttons">
             <button class="btn-login">Login</button>
             <button class="btn-register">Cadastrar</button>
@@ -35,10 +39,14 @@
     <div id="map"></div>
     <div id="coupon-popup" class="hidden">
         <div class="popup-content">
-            <h3>🎁 Coupon Unlocked!</h3>
+            <h3>🎁 Cupom Desbloqueado!</h3>
             <p id="coupon-message"></p>
-            <button onclick="dismissCoupon()">Got it!</button>
+            <button onclick="dismissCoupon()">Entendi!</button>
         </div>
+    </div>
+    
+    <div id="proximity-popup" class="hidden">
+        <p>Você está próximo de um local com cupom! Continue explorando para desbloquear.</p>
     </div>
 
     <!-- Load Three.js -->

@@ -24,6 +24,29 @@ body {
     z-index: 1000;
 }
 
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #34495e;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #f5f5f5;
+}
+
+.nav-link.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+
 .logo {
     height: 40px;
 }
@@ -173,6 +196,129 @@ body {
     background: #2980b9;
 }
 
+/* Estilos para a página de cadastro */
+.container {
+    max-width: 800px;
+    margin: 80px auto 30px;
+    padding: 0 20px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.form-container h1 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.coordinates-container {
+    display: flex;
+    gap: 10px;
+}
+
+.coordinates-container input {
+    flex: 1;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #34495e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #dde4e6;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Estilos para cupons desbloqueados */
+.location-item.unlocked {
+    border-left: 4px solid #27ae60;
+}
+
+.unlocked-badge {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Estilos para o popup de proximidade */
+#proximity-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(44, 62, 80, 0.9);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    transition: all 0.3s ease;
+    max-width: 300px;
+}
+
+#proximity-popup.hidden {
+    transform: translate(-50%, 100px);
+    opacity: 0;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 480px) {
     #coupon-popup {
@@ -186,5 +332,18 @@ body {
 
     .popup-content p {
         font-size: 14px;
+    }
+    
+    .container {
+        padding: 0 15px;
+        margin-top: 70px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
     }
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Estabelecimentos - Locall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Locall Logo" class="logo-image">
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-login">Login</button>
+            <button class="btn-register">Cadastrar</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="form-container">
+            <h1>Cadastro de Estabelecimento</h1>
+            <p>Cadastre seu estabelecimento para oferecer cupons de desconto aos usuários próximos.</p>
+            
+            <form id="establishment-form">
+                <div class="form-group">
+                    <label for="name">Nome do Estabelecimento</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="coordinates">Coordenadas (Latitude, Longitude)</label>
+                    <div class="coordinates-container">
+                        <input type="number" id="latitude" name="latitude" step="0.000001" placeholder="Latitude" required>
+                        <input type="number" id="longitude" name="longitude" step="0.000001" placeholder="Longitude" required>
+                    </div>
+                    <button type="button" id="get-location" class="btn-secondary">Usar Minha Localização</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="discount">Desconto Oferecido</label>
+                    <input type="text" id="discount" name="discount" placeholder="Ex: 20% OFF" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem do Cupom</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Mensagem que aparecerá no cupom" required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Cadastrar Estabelecimento</button>
+                    <a href="index.html" class="btn-secondary">Voltar para o Mapa</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="cadastro.js"></script>
+</body>
+</html>
